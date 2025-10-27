@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 import task1.by.chaika19.validator.ArrayDataValidator;
 import task1.by.chaika19.validator.impl.ArrayDataValidatorImpl;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class CustomArrayValidatorTest {
     private final ArrayDataValidator validator = new ArrayDataValidatorImpl();
 
@@ -18,7 +16,6 @@ public class CustomArrayValidatorTest {
     void isValidArrayLine_Two() {
         System.out.println(validator.isValidArrayLine("10 20 -30 40"));
     }
-
 
     @Test
     void isValidArrayLine_Three() {
@@ -51,7 +48,7 @@ public class CustomArrayValidatorTest {
     }
 
     @Test
-    void isValidArrayLine_ShouldReturnFalse_ForDoubleSeparators() {
+    void isValidArrayLine_Nine() {
         System.out.println(validator.isValidArrayLine("1,2,3"));
         System.out.println(validator.isValidArrayLine("1  2"));
     }

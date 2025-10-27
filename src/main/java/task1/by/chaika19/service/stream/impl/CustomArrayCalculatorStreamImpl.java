@@ -2,7 +2,6 @@ package task1.by.chaika19.service.stream.impl;
 
 import task1.by.chaika19.entity.CustomArray;
 import task1.by.chaika19.exception.CustomArrayException;
-import task1.by.chaika19.service.stream.CustomArrayCalculatorStream;
 
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
