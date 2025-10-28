@@ -3,6 +3,7 @@ package task1.by.chaika19.entity;
 import java.util.Arrays;
 
 public class CustomArray {
+    private Long id;
     private int[] array;
 
     private CustomArray() {
