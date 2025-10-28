@@ -41,7 +41,9 @@ public class CustomArrayCalculatorStreamImpl implements task1.by.chaika19.servic
                 .map(element -> element == conditionValue ? replacementValue : element)
                 .toArray();
 
-        return CustomArray.builder().withArray(newArrayData).build();
+        return CustomArray.builder()
+                .withArray(newArrayData)
+                .build();
     }
 
     @Override

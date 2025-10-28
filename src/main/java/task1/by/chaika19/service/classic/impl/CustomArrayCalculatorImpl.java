@@ -52,7 +52,9 @@ public class CustomArrayCalculatorImpl implements CustomArrayCalculator {
             }
         }
 
-        return CustomArray.builder().withArray(newArr).build();
+        return CustomArray.builder()
+                .withArray(newArr)
+                .build();
     }
 
     @Override

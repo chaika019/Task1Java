@@ -7,7 +7,7 @@ import task1.by.chaika19.parser.CustomArrayDataParser;
 
 public class CustomArrayDataParserImpl implements CustomArrayDataParser {
     private static final Logger logger = LogManager.getLogger(CustomArrayDataParserImpl.class);
-    private static final String SPACE_DELIMITER_REGEX = "^\\s*(-?\\d+)(\\s+-?\\d+)*\\s*$";
+    private static final String SPACE_DELIMITER_REGEX = "[\\s,]+";
 
     @Override
     public int[] parseLine(String line) throws CustomArrayException {
@@ -30,7 +30,7 @@ public class CustomArrayDataParserImpl implements CustomArrayDataParser {
             logger.info("Successfully parsed {} numbers from line.", resultArray.length);
             return resultArray;
         } else {
-            logger.warn("Cannot parse array from empty or null line.");
+            logger.warn("Cannot parse array from empty or null line {}", line);
             throw new CustomArrayException("Cannot parse array from empty or null line.");
         }
     }
