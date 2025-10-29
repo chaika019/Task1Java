@@ -1,4 +1,4 @@
-package test.array.CustomArrayCalculatorStreamTest;
+package test.array.customArrayCalculatorStreamTest;
 
 import org.junit.jupiter.api.Test;
 import task1.by.chaika19.entity.CustomArray;

@@ -1,4 +1,4 @@
-package test.array.CustomArrayValidatorTest;
+package test.array.customArrayValidatorTest;
 
 import org.junit.jupiter.api.Test;
 import task1.by.chaika19.validator.ArrayDataValidator;
