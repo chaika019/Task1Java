@@ -78,10 +78,10 @@ public class CustomArrayCalculatorClassicTest {
         assertEquals(1, result, "count should be 1.");
     }
 
-    //In fact, our validator doesn't allow empty or null arrays
+    //In fact, our validator doesn't allow empty or null arrays,
     //but I'll add it just in case
     @Test
-    public void calculator_emptyArray() throws CustomArrayException {
+    public void calculator_emptyArray() {
         assertThrows(CustomArrayException.class, () -> calculator.countNegatives(emptyArray));
     }
 }
