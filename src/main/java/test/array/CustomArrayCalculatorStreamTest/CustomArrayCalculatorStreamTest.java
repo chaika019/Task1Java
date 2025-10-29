@@ -43,6 +43,16 @@ public class CustomArrayCalculatorStreamTest {
     }
 
     @Test
+    public void calculator_SumWithNullValue(){
+        assertThrows(CustomArrayException.class, () -> calculator.calculateSum(null));
+    }
+
+    @Test
+    public void calculator_SumWithEmptyArray() {
+        assertThrows(CustomArrayException.class, () -> calculator.calculateSum(emptyArray));
+    }
+
+    @Test
     public void calculator_Average() throws CustomArrayException {
         assertEquals(4, calculator.calculateAverage(testArray));
     }

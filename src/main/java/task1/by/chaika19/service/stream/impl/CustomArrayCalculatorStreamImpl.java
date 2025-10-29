@@ -16,7 +16,6 @@ public class CustomArrayCalculatorStreamImpl implements task1.by.chaika19.servic
         }
 
         OptionalInt min = IntStream.of(array.getArray()).min();
-
         return min.orElseThrow(() -> new CustomArrayException("Cannot find minimum value in an empty array."));
     }
 
@@ -27,7 +26,6 @@ public class CustomArrayCalculatorStreamImpl implements task1.by.chaika19.servic
         }
 
         OptionalInt max = IntStream.of(array.getArray()).max();
-
         return max.orElseThrow(() -> new CustomArrayException("Cannot find maximum value in an empty array."));
     }
 
@@ -52,7 +50,8 @@ public class CustomArrayCalculatorStreamImpl implements task1.by.chaika19.servic
             throw new CustomArrayException("CustomArray object must not be null.");
         }
 
-        return IntStream.of(array.getArray()).sum();
+        OptionalInt sum = IntStream.of(array.getArray()).reduce(Integer::sum);
+        return sum.orElseThrow(() -> new CustomArrayException("Cannot calculate sum for an empty array."));
     }
 
     @Override
@@ -62,7 +61,6 @@ public class CustomArrayCalculatorStreamImpl implements task1.by.chaika19.servic
         }
 
         OptionalDouble average = IntStream.of(array.getArray()).average();
-
         return average.orElseThrow(() -> new CustomArrayException("Cannot calculate average for an empty array."));
     }
 
@@ -70,6 +68,7 @@ public class CustomArrayCalculatorStreamImpl implements task1.by.chaika19.servic
         if (array == null) {
             throw new CustomArrayException("CustomArray object must not be null.");
         }
+
         return IntStream.of(array.getArray())
                 .filter(element -> element > 0)
                 .count();
