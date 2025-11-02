@@ -7,7 +7,6 @@ import task1.by.chaika19.parser.CustomArrayDataParser;
 
 public class CustomArrayDataParserImpl implements CustomArrayDataParser {
     private static final Logger logger = LogManager.getLogger(CustomArrayDataParserImpl.class);
-    private static final String SPACE_DELIMITER_REGEX = "[\\s,]+";
 
     @Override
     public int[] parseLine(String line) throws CustomArrayException {
