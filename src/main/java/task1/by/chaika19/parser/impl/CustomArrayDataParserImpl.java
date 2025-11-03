@@ -30,7 +30,7 @@ public class CustomArrayDataParserImpl implements CustomArrayDataParser {
             return resultArray;
         } else {
             logger.warn("Cannot parse array from empty or null line {}", line);
-            throw new CustomArrayException("Cannot parse array from empty or null line.");
+            throw new CustomArrayException("Cannot parse array from empty or null line");
         }
     }
 }
