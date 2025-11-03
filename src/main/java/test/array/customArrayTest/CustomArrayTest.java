@@ -1,4 +1,4 @@
-package test.array.customArray;
+package test.array.customArrayTest;
 
 import org.junit.jupiter.api.Test;
 import task1.by.chaika19.entity.CustomArray;
@@ -89,11 +89,13 @@ public class CustomArrayTest {
 
     @Test
     void toString_ShouldReturnString() {
+        String id = "eb431034-b55b-4c06-bb40-f3cd47361b1d";
         int[] data = {1, -2, 3};
         CustomArray array = CustomArray.builder()
+                .withId(id)
                 .withArray(data)
                 .build();
-        String expected = "CustomArray [array=[1, -2, 3]]";
+        String expected = "CustomArray [id=eb431034-b55b-4c06-bb40-f3cd47361b1d, array=[1, -2, 3]]";
 
         assertEquals(expected, array.toString());
     }

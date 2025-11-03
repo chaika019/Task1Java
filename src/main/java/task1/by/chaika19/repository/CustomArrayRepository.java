@@ -18,6 +18,10 @@ public class CustomArrayRepository {
 
     private CustomArrayRepository() {}
 
+    public CustomArrayWarehouse getWarehouse() {
+        return CustomArrayWarehouse.getInstance();
+    }
+
     public List<CustomArray> query(CustomArraySpecification spec) {
         List<CustomArray> allArrays = this.getAll();
 

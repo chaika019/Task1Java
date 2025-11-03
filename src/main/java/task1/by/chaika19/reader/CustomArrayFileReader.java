@@ -4,6 +4,6 @@ import task1.by.chaika19.exception.CustomArrayException;
 
 import java.util.List;
 
-public interface CustomFileReader {
+public interface CustomArrayFileReader {
     List<String> readFile(String path) throws CustomArrayException;
 }
