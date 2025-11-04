@@ -1,13 +1,13 @@
-package task1.by.chaika19.comparator;
+package by.chaika19.task1.comparator;
 
-import task1.by.chaika19.entity.CustomArray;
-import task1.by.chaika19.entity.CustomArrayStatistics;
-import task1.by.chaika19.warehouse.CustomArrayWarehouse;
+import by.chaika19.task1.entity.CustomArray;
+import by.chaika19.task1.entity.CustomArrayStatistics;
+import by.chaika19.task1.warehouse.CustomArrayWarehouse;
 
 import java.util.Comparator;
 import java.util.Optional;
 
-public class SortByAverageComparator implements Comparator<CustomArray> {
+public class SortByMaxComparator implements Comparator<CustomArray> {
     @Override
     public int compare(CustomArray o1, CustomArray o2) {
         CustomArrayWarehouse customArrayWarehouse = CustomArrayWarehouse.getInstance();
@@ -19,6 +19,9 @@ public class SortByAverageComparator implements Comparator<CustomArray> {
             return 0;
         }
 
-        return Double.compare(stats1.get().getAverage(), stats2.get().getAverage());
+        int max1 = stats1.get().getMax();
+        int max2 = stats2.get().getMax();
+
+        return Integer.compare(max1, max2);
     }
 }

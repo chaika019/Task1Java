@@ -1,6 +1,6 @@
-package task1.by.chaika19.comparator;
+package by.chaika19.task1.comparator;
 
-import task1.by.chaika19.entity.CustomArray;
+import by.chaika19.task1.entity.CustomArray;
 
 import java.util.Comparator;
 

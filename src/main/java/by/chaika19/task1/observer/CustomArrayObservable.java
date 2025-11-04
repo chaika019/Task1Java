@@ -1,4 +1,4 @@
-package task1.by.chaika19.observer;
+package by.chaika19.task1.observer;
 
 public interface CustomArrayObservable {
     void attach(CustomArrayObserver observer);

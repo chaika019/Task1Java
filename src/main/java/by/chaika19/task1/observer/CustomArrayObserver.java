@@ -1,6 +1,6 @@
-package task1.by.chaika19.observer;
+package by.chaika19.task1.observer;
 
-import task1.by.chaika19.entity.CustomArray;
+import by.chaika19.task1.entity.CustomArray;
 
 public interface CustomArrayObserver {
     void parameterChanged(CustomArray customArray);

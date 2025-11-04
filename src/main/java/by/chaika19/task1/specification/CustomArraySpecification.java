@@ -1,6 +1,6 @@
-package task1.by.chaika19.specification;
+package by.chaika19.task1.specification;
 
-import task1.by.chaika19.entity.CustomArray;
+import by.chaika19.task1.entity.CustomArray;
 
 public interface CustomArraySpecification {
     boolean specify(CustomArray array);

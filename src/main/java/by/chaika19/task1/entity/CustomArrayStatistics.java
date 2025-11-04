@@ -1,4 +1,4 @@
-package task1.by.chaika19.entity;
+package by.chaika19.task1.entity;
 
 public class CustomArrayStatistics {
     private final int min;
