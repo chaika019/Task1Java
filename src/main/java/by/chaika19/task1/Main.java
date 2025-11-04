@@ -13,9 +13,9 @@ import by.chaika19.task1.parser.impl.CustomArrayDataParserImpl;
 import by.chaika19.task1.reader.CustomArrayFileReader;
 import by.chaika19.task1.reader.impl.CustomArrayFileReaderImpl;
 import by.chaika19.task1.repository.CustomArrayRepository;
-import by.chaika19.task1.specification.impl.ByIdSpecification;
-import by.chaika19.task1.specification.impl.ByMaxSpecification;
-import by.chaika19.task1.specification.impl.BySumSpecification;
+import by.chaika19.task1.repository.specification.impl.ByIdSpecification;
+import by.chaika19.task1.repository.specification.impl.ByMaxSpecification;
+import by.chaika19.task1.repository.specification.impl.BySumSpecification;
 import by.chaika19.task1.validator.ArrayDataValidator;
 import by.chaika19.task1.validator.impl.ArrayDataValidatorImpl;
 
