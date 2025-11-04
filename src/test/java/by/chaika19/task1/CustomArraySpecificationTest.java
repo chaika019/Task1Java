@@ -1,4 +1,4 @@
-package by.chaika19.task1.customArraySpecificationTest;
+package by.chaika19.task1;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

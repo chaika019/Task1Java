@@ -1,4 +1,4 @@
-package by.chaika19.task1.customArrayRepositoryTest;
+package by.chaika19.task1;
 
 import by.chaika19.task1.comparator.SortBySumComparator;
 import org.junit.jupiter.api.AfterEach;
