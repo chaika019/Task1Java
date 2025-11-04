@@ -2,9 +2,9 @@ package test.array.customArraySorterClassicTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import task1.by.chaika19.entity.CustomArray;
-import task1.by.chaika19.sorter.classic.CustomArraySorter;
-import task1.by.chaika19.sorter.classic.impl.CustomArraySorterImpl;
+import by.chaika19.task1.entity.CustomArray;
+import by.chaika19.task1.sorter.classic.CustomArraySorter;
+import by.chaika19.task1.sorter.classic.impl.CustomArraySorterImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;

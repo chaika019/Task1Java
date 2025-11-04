@@ -1,10 +1,10 @@
 package test.array.customArrayCalculatorStreamTest;
 
 import org.junit.jupiter.api.Test;
-import task1.by.chaika19.entity.CustomArray;
-import task1.by.chaika19.exception.CustomArrayException;
-import task1.by.chaika19.service.stream.CustomArrayCalculatorStream;
-import task1.by.chaika19.service.stream.impl.CustomArrayCalculatorStreamImpl;
+import by.chaika19.task1.entity.CustomArray;
+import by.chaika19.task1.exception.CustomArrayException;
+import by.chaika19.task1.service.stream.CustomArrayCalculatorStream;
+import by.chaika19.task1.service.stream.impl.CustomArrayCalculatorStreamImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 

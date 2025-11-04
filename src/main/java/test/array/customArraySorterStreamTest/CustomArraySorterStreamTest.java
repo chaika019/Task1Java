@@ -1,10 +1,10 @@
 package test.array.customArraySorterStreamTest;
 
 import org.junit.jupiter.api.Test;
-import task1.by.chaika19.entity.CustomArray;
-import task1.by.chaika19.exception.CustomArrayException;
-import task1.by.chaika19.sorter.stream.CustomArraySorterStream;
-import task1.by.chaika19.sorter.stream.impl.CustomArraySorterStreamImpl;
+import by.chaika19.task1.entity.CustomArray;
+import by.chaika19.task1.exception.CustomArrayException;
+import by.chaika19.task1.sorter.stream.CustomArraySorterStream;
+import by.chaika19.task1.sorter.stream.impl.CustomArraySorterStreamImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 

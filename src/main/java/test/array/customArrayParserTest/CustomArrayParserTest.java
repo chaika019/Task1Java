@@ -1,9 +1,9 @@
 package test.array.customArrayParserTest;
 
 import org.junit.jupiter.api.Test;
-import task1.by.chaika19.exception.CustomArrayException;
-import task1.by.chaika19.parser.CustomArrayDataParser;
-import task1.by.chaika19.parser.impl.CustomArrayDataParserImpl;
+import by.chaika19.task1.exception.CustomArrayException;
+import by.chaika19.task1.parser.CustomArrayDataParser;
+import by.chaika19.task1.parser.impl.CustomArrayDataParserImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 

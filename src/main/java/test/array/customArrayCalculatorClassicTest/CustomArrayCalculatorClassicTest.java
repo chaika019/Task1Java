@@ -2,10 +2,10 @@ package test.array.customArrayCalculatorClassicTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import task1.by.chaika19.entity.CustomArray;
-import task1.by.chaika19.exception.CustomArrayException;
-import task1.by.chaika19.service.classic.CustomArrayCalculator;
-import task1.by.chaika19.service.classic.impl.CustomArrayCalculatorImpl;
+import by.chaika19.task1.entity.CustomArray;
+import by.chaika19.task1.exception.CustomArrayException;
+import by.chaika19.task1.service.classic.CustomArrayCalculator;
+import by.chaika19.task1.service.classic.impl.CustomArrayCalculatorImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
