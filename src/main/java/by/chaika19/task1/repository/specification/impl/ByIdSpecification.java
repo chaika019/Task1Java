@@ -1,7 +1,7 @@
-package by.chaika19.task1.specification.impl;
+package by.chaika19.task1.repository.specification.impl;
 
 import by.chaika19.task1.entity.CustomArray;
-import by.chaika19.task1.specification.CustomArraySpecification;
+import by.chaika19.task1.repository.specification.CustomArraySpecification;
 
 public class ByIdSpecification implements CustomArraySpecification {
     private final String targetId ;

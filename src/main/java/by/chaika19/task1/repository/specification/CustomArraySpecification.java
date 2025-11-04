@@ -1,4 +1,4 @@
-package by.chaika19.task1.specification;
+package by.chaika19.task1.repository.specification;
 
 import by.chaika19.task1.entity.CustomArray;
 

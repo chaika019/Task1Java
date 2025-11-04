@@ -4,7 +4,7 @@ import by.chaika19.task1.observer.impl.CustomArrayStatisticsUpdater;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import by.chaika19.task1.entity.CustomArray;
-import by.chaika19.task1.specification.CustomArraySpecification;
+import by.chaika19.task1.repository.specification.CustomArraySpecification;
 import by.chaika19.task1.warehouse.CustomArrayWarehouse;
 
 import java.util.*;

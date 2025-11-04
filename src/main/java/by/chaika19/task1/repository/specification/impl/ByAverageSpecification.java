@@ -1,14 +1,14 @@
-package by.chaika19.task1.specification.impl;
+package by.chaika19.task1.repository.specification.impl;
 
 import by.chaika19.task1.entity.CustomArray;
-import by.chaika19.task1.specification.CustomArraySpecification;
+import by.chaika19.task1.repository.specification.CustomArraySpecification;
 import by.chaika19.task1.warehouse.CustomArrayWarehouse;
 
 public class ByAverageSpecification implements CustomArraySpecification {
-    private final int minAvg;
-    private final int maxAvg;
+    private final double minAvg;
+    private final double maxAvg;
 
-    public ByAverageSpecification(int minAvg, int maxAvg) {
+    public ByAverageSpecification(double minAvg, double maxAvg) {
         this.minAvg = minAvg;
         this.maxAvg = maxAvg;
     }
