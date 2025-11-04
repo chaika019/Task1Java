@@ -1,4 +1,4 @@
-package test.array.customArrayCalculatorStreamTest;
+package by.chaika19.task1.customArrayCalculatorStreamTest;
 
 import org.junit.jupiter.api.Test;
 import by.chaika19.task1.entity.CustomArray;
@@ -32,9 +32,10 @@ public class CustomArrayCalculatorStreamTest {
     @Test
     public void calculator_replaceElements() throws CustomArrayException {
         CustomArray expected = CustomArray.builder()
-                .withArray(new int[]{1,10,3,4,-5,6,7})
+                .withArray(new int[]{1, 10, 3, 4, -5, 16, 7})
                 .build();
-        assertEquals(expected, calculator.replaceElements(testArray, 2, 10));
+        CustomArray actual = calculator.replaceElements(testArray, 2, 10);
+        assertEquals(expected, actual);
     }
 
     @Test

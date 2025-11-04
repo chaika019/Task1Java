@@ -1,4 +1,4 @@
-package test.array.customArraySorterStreamTest;
+package by.chaika19.task1.customArraySorterStreamTest;
 
 import org.junit.jupiter.api.Test;
 import by.chaika19.task1.entity.CustomArray;

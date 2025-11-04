@@ -1,8 +1,8 @@
-package test.array.customArrayValidatorTest;
+package by.chaika19.task1.customArrayValidatorTest;
 
 import org.junit.jupiter.api.Test;
-import task1.by.chaika19.validator.ArrayDataValidator;
-import task1.by.chaika19.validator.impl.ArrayDataValidatorImpl;
+import by.chaika19.task1.validator.ArrayDataValidator;
+import by.chaika19.task1.validator.impl.ArrayDataValidatorImpl;
 
 public class CustomArrayValidatorTest {
     private final ArrayDataValidator validator = new ArrayDataValidatorImpl();

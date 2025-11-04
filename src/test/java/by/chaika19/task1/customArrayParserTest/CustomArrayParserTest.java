@@ -1,4 +1,4 @@
-package test.array.customArrayParserTest;
+package by.chaika19.task1.customArrayParserTest;
 
 import org.junit.jupiter.api.Test;
 import by.chaika19.task1.exception.CustomArrayException;

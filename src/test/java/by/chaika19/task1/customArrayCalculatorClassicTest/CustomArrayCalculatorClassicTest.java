@@ -1,4 +1,4 @@
-package test.array.customArrayCalculatorClassicTest;
+package by.chaika19.task1.customArrayCalculatorClassicTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

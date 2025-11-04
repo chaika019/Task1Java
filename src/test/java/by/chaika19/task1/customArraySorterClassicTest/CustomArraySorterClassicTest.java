@@ -1,4 +1,4 @@
-package test.array.customArraySorterClassicTest;
+package by.chaika19.task1.customArraySorterClassicTest;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
