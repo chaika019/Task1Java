@@ -1,22 +1,23 @@
-package task1.by.chaika19;
+package by.chaika19.task1;
 
+import by.chaika19.task1.warehouse.CustomArrayWarehouse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import task1.by.chaika19.comparator.SortByAverageComparator;
-import task1.by.chaika19.comparator.SortByMaxComparator;
-import task1.by.chaika19.comparator.SortBySumComparator;
-import task1.by.chaika19.entity.CustomArray;
-import task1.by.chaika19.exception.CustomArrayException;
-import task1.by.chaika19.parser.CustomArrayDataParser;
-import task1.by.chaika19.parser.impl.CustomArrayDataParserImpl;
-import task1.by.chaika19.reader.CustomArrayFileReader;
-import task1.by.chaika19.reader.impl.CustomArrayFileReaderImpl;
-import task1.by.chaika19.repository.CustomArrayRepository;
-import task1.by.chaika19.specification.ByIdSpecification;
-import task1.by.chaika19.specification.ByMaxSpecification;
-import task1.by.chaika19.specification.BySumSpecification;
-import task1.by.chaika19.validator.ArrayDataValidator;
-import task1.by.chaika19.validator.impl.ArrayDataValidatorImpl;
+import by.chaika19.task1.comparator.SortByAverageComparator;
+import by.chaika19.task1.comparator.SortByMaxComparator;
+import by.chaika19.task1.comparator.SortBySumComparator;
+import by.chaika19.task1.entity.CustomArray;
+import by.chaika19.task1.exception.CustomArrayException;
+import by.chaika19.task1.parser.CustomArrayDataParser;
+import by.chaika19.task1.parser.impl.CustomArrayDataParserImpl;
+import by.chaika19.task1.reader.CustomArrayFileReader;
+import by.chaika19.task1.reader.impl.CustomArrayFileReaderImpl;
+import by.chaika19.task1.repository.CustomArrayRepository;
+import by.chaika19.task1.specification.impl.ByIdSpecification;
+import by.chaika19.task1.specification.impl.ByMaxSpecification;
+import by.chaika19.task1.specification.impl.BySumSpecification;
+import by.chaika19.task1.validator.ArrayDataValidator;
+import by.chaika19.task1.validator.impl.ArrayDataValidatorImpl;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class Main {
 
     public static void main(String[] args) {
         CustomArrayRepository repository = CustomArrayRepository.getInstance();
+        CustomArrayWarehouse warehouse = CustomArrayWarehouse.getInstance();
 
         logger.info("Loading data from a file and populating the repository");
 
@@ -85,15 +87,15 @@ public class Main {
         }
 
         logger.info("Statistics for Array A after the change: {}",
-                repository.get(idA).flatMap(a -> repository.getWarehouse().getStatistics(a.getId()))
+                warehouse.getStatistics(idA)
                         .map(s -> String.format("Sum: %d, Max: %d", s.getSum(), s.getMax()))
                         .orElse("Statistics not found"));
 
         logger.info("Searching Arrays by Specification");
 
-        BySumSpecification sumSpec = new BySumSpecification(20, 40);
+        BySumSpecification sumSpec = new BySumSpecification(10, 80);
         List<CustomArray> sumResults = repository.query(sumSpec);
-        logger.info("Search results for Sum (100-500): Found {} arrays.", sumResults.size());
+        logger.info("Search results for Sum (20-40): Found {} arrays.", sumResults.size());
 
         ByMaxSpecification maxSpec = new ByMaxSpecification(Integer.MIN_VALUE, 10);
         List<CustomArray> maxResults = repository.query(maxSpec);
@@ -101,23 +103,23 @@ public class Main {
 
         ByIdSpecification idSpec = new ByIdSpecification(idA);
         List<CustomArray> idResult = repository.query(idSpec);
-        logger.info("Search results by ID: {}", idResult.size() > 0 ? "Found" : "Not found");
+        logger.info("Search results by ID: {}", !idResult.isEmpty() ? "Found" : "Not found");
 
         logger.info("Sort Arrays by Specification");
 
         List<CustomArray> sortedBySum = repository.sort(new SortBySumComparator());
         logger.info("Sort by Sum (Min -> Max): {}", sortedBySum.stream()
-                .map(a -> repository.getWarehouse().getStatistics(a.getId()).map(s -> "Sum=" + s.getSum()).orElse("?"))
+                .map(a -> warehouse.getStatistics(a.getId()).map(s -> "Sum=" + s.getSum()).orElse("?"))
                 .toList());
 
         List<CustomArray> sortedByMax = repository.sort(new SortByMaxComparator());
         logger.info("Sort by Max (Min -> Max): {}", sortedByMax.stream()
-                .map(a -> repository.getWarehouse().getStatistics(a.getId()).map(s -> "Max=" + s.getMax()).orElse("?"))
+                .map(a -> warehouse.getStatistics(a.getId()).map(s -> "Max=" + s.getMax()).orElse("?"))
                 .toList());
 
         List<CustomArray> sortedByAverage = repository.sort(new SortByAverageComparator());
         logger.info("Sort by Avg (Min -> Max): {}", sortedByAverage.stream()
-                .map(a -> repository.getWarehouse().getStatistics(a.getId()).map(s -> "Avg=" + String.format("%.2f", s.getAverage())).orElse("?"))
+                .map(a -> warehouse.getStatistics(a.getId()).map(s -> "Avg=" + String.format("%.2f", s.getAverage())).orElse("?"))
                 .toList());
     }
 }
