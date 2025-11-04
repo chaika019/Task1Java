@@ -1,7 +1,7 @@
-package test.array.customArrayTest;
+package by.chaika19.task1.customArrayTest;
 
 import org.junit.jupiter.api.Test;
-import task1.by.chaika19.entity.CustomArray;
+import by.chaika19.task1.entity.CustomArray;
 
 import static org.junit.jupiter.api.Assertions.*;
 
