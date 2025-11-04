@@ -18,22 +18,22 @@ public class CustomArrayParserTest {
     }
 
     @Test
-    public void parser_invalidArray_one() throws CustomArrayException {
+    public void parser_invalidArray_one() {
         assertThrows(CustomArrayException.class, () -> customArrayDataParser.parseLine("1 - 2"));
     }
 
     @Test
-    public void parser_invalidArray_two() throws CustomArrayException {
+    public void parser_invalidArray_two() {
         assertThrows(CustomArrayException.class, () -> customArrayDataParser.parseLine("1; 2"));
     }
 
     @Test
-    public void parser_emptyArray() throws CustomArrayException {
+    public void parser_emptyArray() {
         assertThrows(CustomArrayException.class, () -> customArrayDataParser.parseLine(" "));
     }
 
     @Test
-    public void parser_nullArray() throws CustomArrayException {
+    public void parser_nullArray() {
         assertThrows(CustomArrayException.class, () -> customArrayDataParser.parseLine(null));
     }
 }

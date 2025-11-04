@@ -1,4 +1,4 @@
-package by.chaika19.task1.customArrayFileReaderTest;
+package by.chaika19.task1;
 
 import org.junit.jupiter.api.Test;
 import by.chaika19.task1.reader.CustomArrayFileReader;
@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class customArrayFileReaderTest {
+public class CustomArrayFileReaderTest {
     private final CustomArrayFileReader reader = new CustomArrayFileReaderImpl();
     
     @Test

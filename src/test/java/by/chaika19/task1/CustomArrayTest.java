@@ -1,4 +1,4 @@
-package by.chaika19.task1.customArrayTest;
+package by.chaika19.task1;
 
 import org.junit.jupiter.api.Test;
 import by.chaika19.task1.entity.CustomArray;
@@ -37,11 +37,11 @@ public class CustomArrayTest {
 
         int[] customArray2 = customArray.getArray();
 
-        assertNotSame(originalData, customArray2, "getArray should return a new object instead of the original one.");
+        assertNotSame(originalData, customArray2, "getArray should return a new object instead of the original one");
 
         customArray2[0] = 1;
         int[] internalState = customArray.getArray();
-        assertEquals(123, internalState[0], "Changing the returned array should not change the internal state of the CustomArray.");
+        assertEquals(123, internalState[0], "Changing the returned array should not change the internal state of the CustomArray");
     }
 
     @Test
