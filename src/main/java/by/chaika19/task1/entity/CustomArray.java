@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CustomArray implements CustomArrayObservable {
     private final String id;
-    private int[] array;
+    private final int[] array;
     private final List<CustomArrayObserver> observers = new ArrayList<>();
 
     private CustomArray() {
