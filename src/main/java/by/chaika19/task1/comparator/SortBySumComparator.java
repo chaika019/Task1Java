@@ -13,7 +13,7 @@ public class SortBySumComparator implements Comparator<CustomArray> {
         CustomArrayWarehouse customArrayWarehouse = CustomArrayWarehouse.getInstance();
 
         Optional<CustomArrayStatistics> stats1 = customArrayWarehouse.getStatistics(o1.getId());
-        Optional<CustomArrayStatistics> stats2 = customArrayWarehouse.getStatistics(o1.getId());
+        Optional<CustomArrayStatistics> stats2 = customArrayWarehouse.getStatistics(o2.getId());
 
         if (stats1.isEmpty() || stats2.isEmpty()) {
             return 0;
